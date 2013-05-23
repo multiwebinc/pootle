@@ -57,15 +57,18 @@ stored in the *sites-available* subdirectory of where your Apache configuration
 file is stored and symbolically linked to the *sites-enabled* subdirectory. If
 these do not exist, you can create them as follows:
 
-    $ cd /path/to/apache/config/file/
-    $ mkdir sites-enabled sites-available
-    $ touch sites-available/pootle
-    $ ln -s ../sites-available/pootle sites-enabled/pootle
+.. code-block:: shell
+
+    cd /path/to/apache/config/file/
+    mkdir sites-enabled sites-available
+    touch sites-available/pootle
+    ln -s ../sites-available/pootle sites-enabled/pootle
 
 Then add the following to your Apache configuration file if it isn't already
 there:
 
 .. code-block:: apache
+
     # Include the virtual host configurations:
     Include sites-enabled/
 
